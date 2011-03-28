@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>at.jsflive</groupId>
+    <artifactId>collapsible03-taglib</artifactId>
+    <packaging>jar</packaging>
+    <version>${project.parent.version}</version>
+    <name>JSFlive - Collapsible panel 03 (Taglib)</name>
+
+    <parent>
+        <groupId>at.jsflive</groupId>
+        <artifactId>collapsible03</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-api</artifactId>
+            <version>2.0.4</version>
+            <scope>compile</scope>
+			<optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>el-api</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+			<optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>collapsible03-taglib</finalName>
+        <defaultGoal>install</defaultGoal>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.5</source>
+                        <target>1.5</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-eclipse-plugin</artifactId>
+                    <version>2.5</version>
+                    <configuration>
+                        <wtpversion>1.5</wtpversion>
+                        <downloadSources>true</downloadSources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+	
+</project>
