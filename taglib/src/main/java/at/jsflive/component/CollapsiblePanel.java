@@ -2,7 +2,6 @@ package at.jsflive.component;
 
 import javax.el.ELContext;
 import javax.el.ValueExpression;
-import javax.faces.application.Resource;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 import javax.faces.context.FacesContext;
