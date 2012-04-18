@@ -22,6 +22,7 @@ public class CollapsiblePanel extends UINamingContainer {
         getStateHelper().put(PropertyKeys.collapsed, collapsed);
     }
 
+    @SuppressWarnings("UnusedDeclaration")
     public void toggle(ActionEvent e) {
         setCollapsed(!isCollapsed());
         setCollapsedValueExpression();
