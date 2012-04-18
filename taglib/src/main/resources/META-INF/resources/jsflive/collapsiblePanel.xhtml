@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
         xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:cc="http://java.sun.com/jsf/composite">
-<head>
-    <title>A collapsible panel composite component</title>
-</head>
-<body>
-<cc:interface componentType="at.jsflive.CollapsiblePanel">
-    <cc:attribute name="collapsed"/>
-    <cc:actionSource name="toggle"/>
-    <cc:facet name="header"/>
-</cc:interface>
-<cc:implementation>
-    <h:panelGroup layout="block" styleClass="collapsiblePanel-header">
-        <h:commandButton id="toggle" actionListener="#{cc.toggle}" styleClass="collapsiblePanel-img"
-                image="#{resource[cc.collapsed ? 'jsflive:plus.png' : 'jsflive:minus.png']}"/>
-        <cc:renderFacet name="header"/>
-    </h:panelGroup>
-    <h:panelGroup layout="block" rendered="#{!cc.collapsed}">
-        <cc:insertChildren/>
-    </h:panelGroup>
-    <h:outputStylesheet library="jsflive" name="components.css"/>
-</cc:implementation>
-</body>
-</html>
+        xmlns:cc="http://java.sun.com/jsf/composite"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <cc:interface componentType="at.jsflive.CollapsiblePanel">
+        <cc:attribute name="collapsed"/>
+        <cc:actionSource name="toggle"/>
+        <cc:facet name="header"/>
+    </cc:interface>
+
+    <cc:implementation>
+        <h:panelGroup layout="block" styleClass="collapsiblePanel-header">
+            <h:commandButton id="toggle" actionListener="#{cc.toggle}" styleClass="collapsiblePanel-img"
+                    image="#{resource[cc.collapsed ? 'jsflive:plus.png' : 'jsflive:minus.png']}"/>
+            <cc:renderFacet name="header"/>
+        </h:panelGroup>
+        <h:panelGroup layout="block" rendered="#{!cc.collapsed}">
+            <cc:insertChildren/>
+        </h:panelGroup>
+        <h:outputStylesheet library="jsflive" name="components.css"/>
+    </cc:implementation>
+
+</ui:composition>
